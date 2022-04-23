@@ -4,13 +4,13 @@ on:
   pull_request: # on a pull request to each of these branches
     branches: [ master ]
  
-  env: # environment variables (available in any part of the action)
+  env:
   NODE_VERSION: 14
  
 jobs: 
-  build:
-    runs-on: ubuntu-latest # on which machine to run
-      steps: # list of steps   
+  lint:
+    runs-on: ubuntu-latest
+      steps:  
         - name: Install NodeJS
         - uses: actions/setup-node@v2
         with:
